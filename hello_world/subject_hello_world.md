@@ -10,7 +10,7 @@ hello_world
 └── test_hello_world.py
 ```
 
-## Hello World!
+## Instructions 
 
 In the file `hello_world.py`, write a function named `hello_world` that does not take any argument, and displays `Hello World!` on the standard output, with a trailing newline.
 

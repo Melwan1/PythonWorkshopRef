@@ -24,8 +24,7 @@ The set of rules to create a valid login is :
 
 1. the login must contain between 4 and 40 characters (bounds included).
 2. it has to be of the form `{firstName}.{lastName}`, where neither the first name nor the last name contain the `.` character
-3. the first name and the last name may only contain letters, be they capital or not. The first name may also contain digits from 0 to 9. The accents are forbidden.
-4. the possible digits of a first name can only be at the end of the first name.
+3. the first name and the last name may only contain letters, be they capital or not. The first name may also contain digits from 0 to 9. The accents are forbidden. The possible digits of a first name can only be at the end of the first name.
 
 If at least one of these rules are violated, a message has to be printed to the error output, with a trailing newline. The messages are : 
 
@@ -38,7 +37,6 @@ If at least one of these rules are violated, a message has to be printed to the 
 
     - If the problem is in the last name, the message is : `The last name contains an illegal character: {illegal character}.`, where `{illegal character}` is the first illegal character in the last name.
 
-4. `The first name may only contain digits at the end of it. Detected an illegal digit before the end: {illegal digit}.` where `{illegal digit}` is the first illegal digit found in the first name.
 
 ### Password
 

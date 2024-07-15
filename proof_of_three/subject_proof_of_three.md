@@ -8,12 +8,13 @@ The game is about finding sets of 3 cards that match some rules.
 
 ### The cards
 
-The symbols on a card have 3 characteristics : 
+The symbols on a card have 4 characteristics : 
 - a color,
 - a number of symbols,
-- a shape.
+- a shape,
+- a filling
 
-The shape can be : wave (`~~`), diamond (`<>`) or rectangle (`==`), there can be 1, 2 or 3 symbols on a card and the color is either red, green or blue.
+The shape can be : wave (`~~`), diamond (`<>`) or rectangle (`==`), there can be 1, 2 or 3 symbols on a card, the color is either red, green or blue and the filling is empty, hatched or filled.
 
 ### Match
 
@@ -58,6 +59,12 @@ The `__init__` method of the `Card` class must have four arguments:
 - the filling of the symbols : `empty`, `hatched` or `filled`.
 
 It must also contain a method `matches_with`, that takes two arguments of the `Card` type and returns `True` if the cards match, and `False` if not.
+
+Finally, the method `__repr__` is used to represent a card. A card representation is of the form
+```
+Card({color}, {shape}, {number}, {filling})
+```
+where `color`, `shape`, `number` and `filling` have to be replaced by the actual attributes of the card.
 
 ### Deck class
 
@@ -127,10 +134,13 @@ For example,
 
 If no match has been found, it calls the `display_cards` function.
 
-If a match has been found, this method removes the matched carfs from the `showed` array and puts them in the `played` array.
+If a match has been found, this method removes the matched cards from the `showed` array and puts them in the `played` array.
+
+The method returns whether a match has been found.
 
 --- 
-**Tip**
+**Tip!**
+
 Don't worry, the math behind this game shows that a match is always found when the `showed` array has at least 18 cards, but most of the time 12 or 15 cards are enough.
 
 ---

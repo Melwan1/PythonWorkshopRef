@@ -15,4 +15,4 @@ class ColoredLogger(Logger):
     
     def log(self, level: LogLevel, message: str):
         if (level.value >= self.level.value):
-            print(ColoredLogger.colorMap[level], f"[{level.name}] {message}", ColoredLogger.RESET)
+            print(ColoredLogger.colorMap[level], f"[{level.name}] {message}", ColoredLogger.RESET, sep="")

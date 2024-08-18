@@ -11,4 +11,4 @@ class ColoredTimeLogger(ColoredLogger, TimeLogger):
     def log(self, level: LogLevel, message: str):
         if (level.value >= self.level.value):
             t = time.localtime()
-            print(ColoredLogger.colorMap[level], f"[{t.tm_hour:>02}:{t.tm_min:>02}:{t.tm_sec:>02}][{level.name}] {message}", ColoredLogger.RESET)
+            print(ColoredLogger.colorMap[level], f"[{t.tm_hour:>02}:{t.tm_min:>02}:{t.tm_sec:>02}][{level.name}] {message}", ColoredLogger.RESET, sep="")
